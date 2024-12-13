@@ -1,5 +1,5 @@
 # GameNGen-Mini
-A DiT model based on Oasis implementation that generates the next frame conditioned on actions and the previous frames. The files are gonna be added soon.
+A DiT model based on Oasis [1] implementation (and inspired by GameNGen [5]) that generates the next frame conditioned on actions and the previous frames. The files are gonna be added soon.
 
 ## Script Descriptions
 - **generate_dataset.py** *[implemented from scratch]*: This script is used to generate data for training (i.e. frames, actions, temporal indices). It utilizes gymnasium to simulate a game environment and stable_baselines3 to train an agent. I tried PPO and DQN, but decided to go with the second one since the results were slightly better. The game simulated was “ALE/Pong-v5“.
@@ -12,8 +12,12 @@ A DiT model based on Oasis implementation that generates the next frame conditio
 - **dit.py** *[made by [1], adapted]*: Contains an implementation of a diffusion model with a transformer backbone. It is a modification of a traditional DiT that is also temporal-aware.
 - **utils.py** *[made by [1], adapted]*: Contains various utils for the project.
 
+## Demo Gameplay
+![](https://github.com/Mruzik1/GameNGen-Mini/blob/main/gamengen_play.gif)
+
 ## References
 - [1] Decart et al. Oasis: A Universe in a Transformer. 2024. url: https://oasis-model.github.io/.
 - [2] Fan Bao et al. “All are worth words: A vit backbone for diffusion models”. In: Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2023, pp. 22669–22679.
 - [3] Boyuan Chen et al. Diffusion Forcing: Next-token Prediction Meets FullSequence Diffusion. 2024. arXiv: 2407 . 01392 [cs.LG]. url: https://arxiv.org/abs/2407.01392.
 - [4] Jianlin Su et al. RoFormer: Enhanced Transformer with Rotary Position Embedding. 2021. arXiv: 2104.09864 [cs.CL].
+- [5] Dani Valevski et al. Diffusion Models Are Real-Time Game Engines. 2024. arXiv: 2408.14837 [cs.LG]. url: https://arxiv.org/abs/2408.14837.
